@@ -7,7 +7,7 @@ from langchain_groq import ChatGroq
 from langchain.chains import RetrievalQA
 
 st.set_page_config(page_title="PDF QA Retrieval-Augmented Generation Assistant")
-st.title("📄 PDF QA QA with Retrieval-Augmented Generation")
+st.title("📄 PDF QA with Retrieval-Augmented Generation")
 
 with st.form("resume_form"):
     uploaded_file = st.file_uploader("Upload a PDF", type="pdf")
