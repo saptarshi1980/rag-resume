@@ -6,12 +6,12 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain.chains import RetrievalQA
 
-st.set_page_config(page_title="Resume Retrieval-Augmented Generation Assistant")
-st.title("📄 Resume QA with Retrieval-Augmented Generation")
+st.set_page_config(page_title="PDF QA Retrieval-Augmented Generation Assistant")
+st.title("📄 PDF QA QA with Retrieval-Augmented Generation")
 
 with st.form("resume_form"):
-    uploaded_file = st.file_uploader("Upload a resume PDF", type="pdf")
-    query = st.text_input("Ask a question about the resume:")
+    uploaded_file = st.file_uploader("Upload a PDF", type="pdf")
+    query = st.text_input("Ask a question about from this PDF:")
     submitted = st.form_submit_button("Submit")
 
 if submitted and uploaded_file and query:
