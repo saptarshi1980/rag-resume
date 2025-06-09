@@ -6,8 +6,8 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain.chains import RetrievalQA
 
-st.set_page_config(page_title="Resume RAG Assistant")
-st.title("📄 Resume QA with RAG")
+st.set_page_config(page_title="Resume Retrieval-Augmented Generation Assistant")
+st.title("📄 Resume QA with Retrieval-Augmented Generation")
 
 with st.form("resume_form"):
     uploaded_file = st.file_uploader("Upload a resume PDF", type="pdf")
@@ -41,3 +41,4 @@ if submitted and uploaded_file and query:
         result = qa_chain.invoke({"query": query})
         st.success("Answer:")
         st.write(result["result"])
+
